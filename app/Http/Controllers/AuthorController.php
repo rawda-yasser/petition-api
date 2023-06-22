@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Author;
-use App\Http\Requests\StoreAuthorRequest;
-use App\Http\Requests\UpdateAuthorRequest;
+use App\Http\Resources\AuthorResource;
+use App\Models\Author;
+use App\Http\Resources\AuthorCollection;
 
 class AuthorController extends Controller
 {
@@ -13,7 +13,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        //
+        return new AuthorCollection(Author::all());
     }
 
     /**
@@ -23,7 +23,7 @@ class AuthorController extends Controller
 
     public function show(Author $author)
     {
-        //
+        return new AuthorResource($author);
     }
 
 

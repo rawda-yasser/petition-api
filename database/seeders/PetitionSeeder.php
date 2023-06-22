@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Petition;
+use App\Models\Petition;
 use Illuminate\Database\Seeder;
 
 class PetitionSeeder extends Seeder
