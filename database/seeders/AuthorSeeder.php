@@ -2,16 +2,16 @@
 
 namespace Database\Seeders;
 
-use App\Petition;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PetitionSeeder extends Seeder
+class AuthorSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Petition::factory(50)->create();
+        //
     }
 }
